@@ -1,0 +1,371 @@
+2025-01-08 11:54:54.302 | INFO     | __main__:main:8 - running the application...
+2025-01-08 11:54:54.302 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 11:54:54.302 | WARNING  | model.model_service:load_model:17 - model at model\models/diamonds_rf was not found -> building diamonds_rf
+2025-01-08 11:54:54.302 | INFO     | model.pipeline.model:build_model:12 - building model pipline
+2025-01-08 11:54:54.302 | INFO     | model.pipeline.preparation:prepare_data:6 - beginning preprocessing
+2025-01-08 11:54:54.302 | INFO     | model.pipeline.collection:load_data_from_csv:7 - extracting the table from the csv
+2025-01-08 11:55:04.535 | INFO     | model.pipeline.model:evaluate_model:47 - evaluating model performance. SCORE=1.0
+2025-01-08 11:55:04.541 | INFO     | model.pipeline.model:save_model:52 - saving a model to a directory: model\models/diamonds_rf
+2025-01-08 11:55:04.544 | INFO     | model.model_service:load_model:20 - model diamonds_rf exists! -> loading model configuration file
+2025-01-08 11:55:04.552 | ERROR    | __main__:<module>:18 - An error has been caught in function '<module>', process 'MainProcess' (5196), thread 'MainThread' (22648):
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 18, in <module>
+    main()
+    └ <function main at 0x00000200E7FBE160>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 12, in main
+    test = pd.read_csv('test_sheet.csv')
+           │  └ <function read_csv at 0x0000020081934900>
+           └ <module 'pandas' from 'C:\\Users\\fridc\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\diamonds-kt-h7B-t-py3.12\\Lib\\site-pa...
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           │     │                   └ {'delimiter': ',', 'header': 'infer', 'names': None, 'index_col': None, 'usecols': None, 'dtype': None, 'engine': 'c', 'conve...
+           │     └ 'test_sheet.csv'
+           └ <function _read at 0x0000020081934540>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             │              │                     └ {'delimiter': ',', 'header': 'infer', 'names': None, 'index_col': None, 'usecols': None, 'dtype': None, 'engine': 'c', 'conve...
+             │              └ 'test_sheet.csv'
+             └ <class 'pandas.io.parsers.readers.TextFileReader'>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+    │              │    │            │  │    └ 'c'
+    │              │    │            │  └ <pandas.io.parsers.readers.TextFileReader object at 0x0000020099775F10>
+    │              │    │            └ 'test_sheet.csv'
+    │              │    └ <function TextFileReader._make_engine at 0x00000200819354E0>
+    │              └ <pandas.io.parsers.readers.TextFileReader object at 0x0000020099775F10>
+    └ <pandas.io.parsers.readers.TextFileReader object at 0x0000020099775F10>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+    │    │         └ <function get_handle at 0x0000020081694540>
+    │    └ None
+    └ <pandas.io.parsers.readers.TextFileReader object at 0x0000020099775F10>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+
+FileNotFoundError: [Errno 2] No such file or directory: 'test_sheet.csv'
+2025-01-08 11:56:16.991 | INFO     | __main__:main:8 - running the application...
+2025-01-08 11:56:16.991 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 11:56:16.991 | WARNING  | model.model_service:load_model:17 - model at model\models/diamonds_rf was not found -> building diamonds_rf
+2025-01-08 11:56:16.991 | INFO     | model.pipeline.model:build_model:12 - building model pipline
+2025-01-08 11:56:16.992 | INFO     | model.pipeline.preparation:prepare_data:6 - beginning preprocessing
+2025-01-08 11:56:16.992 | INFO     | model.pipeline.collection:load_data_from_csv:7 - extracting the table from the csv
+2025-01-08 11:56:17.003 | ERROR    | __main__:<module>:18 - An error has been caught in function '<module>', process 'MainProcess' (9604), thread 'MainThread' (24004):
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 18, in <module>
+    main()
+    └ <function main at 0x0000022110DFE160>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 10, in main
+    ml_svc.load_model()
+    │      └ <function ModelService.load_model at 0x000002212B852C00>
+    └ <model.model_service.ModelService object at 0x0000022142B574D0>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\model_service.py", line 18, in load_model
+    build_model()
+    └ <function build_model at 0x000002212B852CA0>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\pipeline\model.py", line 14, in build_model
+    df = prepare_data()
+         └ <function prepare_data at 0x00000221444756C0>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\pipeline\preparation.py", line 10, in prepare_data
+    data = fill_na(data)
+           │       └                  Shape    Cut Color Clarity  ...  Height  Price           Type  Fluorescence
+           │         0     Cushion Modified  Ideal   ...
+           └ <function fill_na at 0x0000022144476980>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\pipeline\preparation.py", line 19, in fill_na
+    data = data.drop('Cut', axis=1)
+           └ None
+
+AttributeError: 'NoneType' object has no attribute 'drop'
+2025-01-08 11:57:19.303 | INFO     | __main__:main:8 - running the application...
+2025-01-08 11:57:19.304 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 11:57:19.304 | WARNING  | model.model_service:load_model:17 - model at model\models/diamonds_rf was not found -> building diamonds_rf
+2025-01-08 11:57:19.304 | INFO     | model.pipeline.model:build_model:12 - building model pipline
+2025-01-08 11:57:19.304 | INFO     | model.pipeline.preparation:prepare_data:6 - beginning preprocessing
+2025-01-08 11:57:19.304 | INFO     | model.pipeline.collection:load_data_from_csv:7 - extracting the table from the csv
+2025-01-08 11:57:19.320 | ERROR    | __main__:<module>:18 - An error has been caught in function '<module>', process 'MainProcess' (19660), thread 'MainThread' (20408):
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 18, in <module>
+    main()
+    └ <function main at 0x0000018F0C16E160>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 10, in main
+    ml_svc.load_model()
+    │      └ <function ModelService.load_model at 0x0000018F3FBC1BC0>
+    └ <model.model_service.ModelService object at 0x0000018F3F38D070>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\model_service.py", line 18, in load_model
+    build_model()
+    └ <function build_model at 0x0000018F26B61D00>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\pipeline\model.py", line 19, in build_model
+    X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                       │                │  └ Series([], Name: Type, dtype: object)
+                                       │                └ Empty DataFrame
+                                       │                  Columns: [Carat Weight, Length/Width Ratio, Depth %, Table %, Length, Width, Height, Price]
+                                       │                  Index: []
+                                       └ <function train_test_split at 0x0000018F3F4551C0>
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\sklearn\utils\_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'test_size': 0.2, 'random_state': 42, 'stratify': Series([], Name: Type, dtype: object)}
+           │     └ (Empty DataFrame
+           │       Columns: [Carat Weight, Length/Width Ratio, Depth %, Table %, Length, Width, Height, Price]
+           │       Index: [], Serie...
+           └ <function train_test_split at 0x0000018F3F455080>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\sklearn\model_selection\_split.py", line 2851, in train_test_split
+    n_train, n_test = _validate_shuffle_split(
+                      └ <function _validate_shuffle_split at 0x0000018F3F435E40>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\sklearn\model_selection\_split.py", line 2481, in _validate_shuffle_split
+    raise ValueError(
+
+ValueError: With n_samples=0, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-01-08 11:59:30.057 | INFO     | __main__:main:8 - running the application...
+2025-01-08 11:59:30.057 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 11:59:30.057 | WARNING  | model.model_service:load_model:17 - model at model\models/diamonds_rf was not found -> building diamonds_rf
+2025-01-08 11:59:30.057 | INFO     | model.pipeline.model:build_model:12 - building model pipline
+2025-01-08 11:59:30.058 | INFO     | model.pipeline.preparation:prepare_data:6 - beginning preprocessing
+2025-01-08 11:59:30.058 | INFO     | model.pipeline.collection:load_data_from_csv:7 - extracting the table from the csv
+2025-01-08 11:59:30.074 | ERROR    | __main__:<module>:18 - An error has been caught in function '<module>', process 'MainProcess' (22372), thread 'MainThread' (11920):
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 18, in <module>
+    main()
+    └ <function main at 0x000002AF1F34E160>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 10, in main
+    ml_svc.load_model()
+    │      └ <function ModelService.load_model at 0x000002AF52DBDBC0>
+    └ <model.model_service.ModelService object at 0x000002AF525D9040>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\model_service.py", line 18, in load_model
+    build_model()
+    └ <function build_model at 0x000002AF39D61D00>
+
+  File "C:\Users\fridc\Documents\diamonds\src\model\pipeline\model.py", line 19, in build_model
+    X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                       │                │  └ Series([], Name: Type, dtype: object)
+                                       │                └ Empty DataFrame
+                                       │                  Columns: [Carat Weight, Length/Width Ratio, Depth %, Table %, Length, Width, Height, Price]
+                                       │                  Index: []
+                                       └ <function train_test_split at 0x000002AF526551C0>
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\sklearn\utils\_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'test_size': 0.2, 'random_state': 42, 'stratify': Series([], Name: Type, dtype: object)}
+           │     └ (Empty DataFrame
+           │       Columns: [Carat Weight, Length/Width Ratio, Depth %, Table %, Length, Width, Height, Price]
+           │       Index: [], Serie...
+           └ <function train_test_split at 0x000002AF52655080>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\sklearn\model_selection\_split.py", line 2851, in train_test_split
+    n_train, n_test = _validate_shuffle_split(
+                      └ <function _validate_shuffle_split at 0x000002AF52635E40>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\sklearn\model_selection\_split.py", line 2481, in _validate_shuffle_split
+    raise ValueError(
+
+ValueError: With n_samples=0, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-01-08 12:00:29.461 | INFO     | __main__:main:8 - running the application...
+2025-01-08 12:00:29.461 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 12:00:29.461 | WARNING  | model.model_service:load_model:17 - model at model\models/diamonds_rf was not found -> building diamonds_rf
+2025-01-08 12:00:29.461 | INFO     | model.pipeline.model:build_model:12 - building model pipline
+2025-01-08 12:00:29.461 | INFO     | model.pipeline.preparation:prepare_data:6 - beginning preprocessing
+2025-01-08 12:00:29.461 | INFO     | model.pipeline.collection:load_data_from_csv:7 - extracting the table from the csv
+2025-01-08 12:00:39.563 | INFO     | model.pipeline.model:evaluate_model:47 - evaluating model performance. SCORE=1.0
+2025-01-08 12:00:39.568 | INFO     | model.pipeline.model:save_model:52 - saving a model to a directory: model\models/diamonds_rf
+2025-01-08 12:00:39.570 | INFO     | model.model_service:load_model:20 - model diamonds_rf exists! -> loading model configuration file
+2025-01-08 12:00:39.588 | ERROR    | __main__:<module>:18 - An error has been caught in function '<module>', process 'MainProcess' (24328), thread 'MainThread' (16748):
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 18, in <module>
+    main()
+    └ <function main at 0x0000023724EBE160>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 12, in main
+    test = pd.read_csv('test_sheet.csv')
+           │  └ <function read_csv at 0x000002373E7E4900>
+           └ <module 'pandas' from 'C:\\Users\\fridc\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\diamonds-kt-h7B-t-py3.12\\Lib\\site-pa...
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           │     │                   └ {'delimiter': ',', 'header': 'infer', 'names': None, 'index_col': None, 'usecols': None, 'dtype': None, 'engine': 'c', 'conve...
+           │     └ 'test_sheet.csv'
+           └ <function _read at 0x000002373E7E4540>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             │              │                     └ {'delimiter': ',', 'header': 'infer', 'names': None, 'index_col': None, 'usecols': None, 'dtype': None, 'engine': 'c', 'conve...
+             │              └ 'test_sheet.csv'
+             └ <class 'pandas.io.parsers.readers.TextFileReader'>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+    │              │    │            │  │    └ 'c'
+    │              │    │            │  └ <pandas.io.parsers.readers.TextFileReader object at 0x00000237583FDA30>
+    │              │    │            └ 'test_sheet.csv'
+    │              │    └ <function TextFileReader._make_engine at 0x000002373E7E54E0>
+    │              └ <pandas.io.parsers.readers.TextFileReader object at 0x00000237583FDA30>
+    └ <pandas.io.parsers.readers.TextFileReader object at 0x00000237583FDA30>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+    │    │         └ <function get_handle at 0x000002373E534540>
+    │    └ None
+    └ <pandas.io.parsers.readers.TextFileReader object at 0x00000237583FDA30>
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+
+FileNotFoundError: [Errno 2] No such file or directory: 'test_sheet.csv'
+2025-01-08 12:26:45.063 | INFO     | __main__:main:8 - running the application...
+2025-01-08 12:26:45.064 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 12:26:45.064 | WARNING  | model.model_service:load_model:17 - model at model\models/diamonds_rf was not found -> building diamonds_rf
+2025-01-08 12:26:45.064 | INFO     | model.pipeline.model:build_model:12 - building model pipline
+2025-01-08 12:26:45.064 | INFO     | model.pipeline.preparation:prepare_data:6 - beginning preprocessing
+2025-01-08 12:26:45.064 | INFO     | model.pipeline.collection:load_data_from_csv:7 - extracting the table from the csv
+2025-01-08 12:26:55.213 | INFO     | model.pipeline.model:evaluate_model:47 - evaluating model performance. SCORE=1.0
+2025-01-08 12:26:55.218 | INFO     | model.pipeline.model:save_model:52 - saving a model to a directory: model\models/diamonds_rf
+2025-01-08 12:26:55.220 | INFO     | model.model_service:load_model:20 - model diamonds_rf exists! -> loading model configuration file
+2025-01-08 12:26:55.253 | ERROR    | __main__:<module>:20 - An error has been caught in function '<module>', process 'MainProcess' (6244), thread 'MainThread' (10896):
+Traceback (most recent call last):
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           │    │               └ 41
+           │    └ <pandas._libs.properties.CachedProperty object at 0x00000195A91B10C0>
+           └ Index(['Carat Weight', 'Length/Width Ratio', 'Depth %', 'Table %', 'Length',
+                    'Width', 'Height', 'Price', 'Fluorescence...
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+
+KeyError: 41
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 20, in <module>
+    main()
+    └ <function main at 0x000001958FD6E660>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 16, in main
+    pred = ml_svc.predict(test[41])
+           │      │       └       Carat Weight  Length/Width Ratio  Depth %  ...  Culet_Small  Culet_Very Large  Culet_Very Small
+           │      │         6             1.10     ...
+           │      └ <function ModelService.predict at 0x00000195C37E9C60>
+           └ <model.model_service.ModelService object at 0x00000195AA7B9DC0>
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              │    │               └ 41
+              │    └ <pandas._libs.properties.AxisProperty object at 0x00000195A94ECDF0>
+              └       Carat Weight  Length/Width Ratio  Depth %  ...  Culet_Small  Culet_Very Large  Culet_Very Small
+                6             1.10     ...
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+                   └ 41
+
+KeyError: 41
+2025-01-08 12:27:55.195 | INFO     | __main__:main:8 - running the application...
+2025-01-08 12:27:55.195 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 12:27:55.196 | INFO     | model.model_service:load_model:20 - model diamonds_rf exists! -> loading model configuration file
+2025-01-08 12:27:55.214 | ERROR    | __main__:<module>:21 - An error has been caught in function '<module>', process 'MainProcess' (22452), thread 'MainThread' (22480):
+Traceback (most recent call last):
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           │    │               └ 41
+           │    └ <pandas._libs.properties.CachedProperty object at 0x00000157D9791080>
+           └ Index(['Carat Weight', 'Length/Width Ratio', 'Depth %', 'Table %', 'Length',
+                    'Width', 'Height', 'Price', 'Fluorescence...
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+
+KeyError: 41
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 21, in <module>
+    main()
+    └ <function main at 0x00000157C035E160>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 16, in main
+    print(test[41])
+          └       Carat Weight  Length/Width Ratio  Depth %  ...  Culet_Small  Culet_Very Large  Culet_Very Small
+            6             1.10     ...
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              │    │               └ 41
+              │    └ <pandas._libs.properties.AxisProperty object at 0x00000157D9ACD0F0>
+              └       Carat Weight  Length/Width Ratio  Depth %  ...  Culet_Small  Culet_Very Large  Culet_Very Small
+                6             1.10     ...
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+                   └ 41
+
+KeyError: 41
+2025-01-08 12:28:10.443 | INFO     | __main__:main:8 - running the application...
+2025-01-08 12:28:10.444 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 12:28:10.444 | INFO     | model.model_service:load_model:20 - model diamonds_rf exists! -> loading model configuration file
+2025-01-08 12:28:10.464 | ERROR    | __main__:<module>:21 - An error has been caught in function '<module>', process 'MainProcess' (7372), thread 'MainThread' (17908):
+Traceback (most recent call last):
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           │    │               └ 41
+           │    └ <pandas._libs.properties.CachedProperty object at 0x000001A491850880>
+           └ Index(['Carat Weight', 'Length/Width Ratio', 'Depth %', 'Table %', 'Length',
+                    'Width', 'Height', 'Price', 'Fluorescence...
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+
+KeyError: 41
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+> File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 21, in <module>
+    main()
+    └ <function main at 0x000001A4F848E160>
+
+  File "C:\Users\fridc\Documents\diamonds\src\runner.py", line 17, in main
+    pred = ml_svc.predict(test[41])
+           │      │       └       Carat Weight  Length/Width Ratio  Depth %  ...  Culet_Small  Culet_Very Large  Culet_Very Small
+           │      │         6             1.10     ...
+           │      └ <function ModelService.predict at 0x000001A4ABE51BC0>
+           └ <model.model_service.ModelService object at 0x000001A492E59D90>
+
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              │    │               └ 41
+              │    └ <pandas._libs.properties.AxisProperty object at 0x000001A491B8CF10>
+              └       Carat Weight  Length/Width Ratio  Depth %  ...  Culet_Small  Culet_Very Large  Culet_Very Small
+                6             1.10     ...
+  File "C:\Users\fridc\AppData\Local\pypoetry\Cache\virtualenvs\diamonds-kt-h7B-t-py3.12\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+                   └ 41
+
+KeyError: 41
+2025-01-08 12:28:27.566 | INFO     | __main__:main:8 - running the application...
+2025-01-08 12:28:27.566 | INFO     | model.model_service:load_model:13 - checking the existance of model config file at model\models/diamonds_rf
+2025-01-08 12:28:27.566 | INFO     | model.model_service:load_model:20 - model diamonds_rf exists! -> loading model configuration file
+2025-01-08 12:28:27.585 | INFO     | model.model_service:predict:24 - making prediction!
+2025-01-08 12:28:27.590 | INFO     | __main__:main:17 - prediction = ['IGI Lab-Grown']
