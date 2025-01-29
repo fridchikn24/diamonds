@@ -3,7 +3,7 @@
 
 
 run: install
-	cd src; poetry run python runner.py
+	cd src; poetry run python3 runner.py
 
 install: pyproject.toml
 	poetry install
