@@ -10,7 +10,6 @@ This project focuses on analyzing a dataset of diamonds to understand the factor
 - [Usage](#usage)
 - [Analysis and Modeling](#analysis-and-modeling)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
@@ -41,15 +40,40 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/fridchikn24/diamonds.git
-   cd diamonds
+         git clone https://github.com/fridchikn24/diamonds.git
+   
+         cd diamonds
 
-2. **Install dependencies:**
+3. **Install dependencies:**
 
 Ensure you have Poetry installed. Then, run:
 
-   ```bash
-   poetry install
+      poetry install
 
-This command will create a virtual environment and install all required dependencies as specified in pyproject.toml.   
+This command will create a virtual environment and install all required dependencies as specified in pyproject.toml
+
+## Usage
+
+Activate the virtual environment:
+
+   poetry shell
+
+Run the analysis:
+
+Execute the main analysis script:
+
+       python src/analyze_diamonds.py
+
+This script will perform EDA, build predictive models, and generate visualizations. The results will be saved in the results directory.
+
+## Analysis and Modeling
+
+The project includes:
+
+- Exploratory Data Analysis (EDA): Visualizations and statistical summaries to understand the distribution of features and their relationships with the price.
+- Predictive Modeling: Building regression models to predict diamond prices based on their attributes. Models may include linear regression, decision trees, or more advanced algorithms.
+- Evaluation: Assessing model performance using appropriate metrics and validation techniques.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request. Ensure that your contributions align with the project's coding standards and include appropriate tests.
