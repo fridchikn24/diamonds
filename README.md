@@ -15,7 +15,6 @@ This project focuses on analyzing a dataset of diamonds to understand the factor
 
 Diamonds are evaluated based on various attributes such as carat, cut, color, and clarity. This project aims to:
 
-- Perform exploratory data analysis (EDA) to uncover insights about the dataset.
 - Build predictive models to estimate diamond prices based on their attributes.
 - Provide visualizations to aid in understanding the relationships between different features and the price.
 
@@ -64,13 +63,12 @@ Execute the main analysis script:
 
        python src/analyze_diamonds.py
 
-This script will perform EDA, build predictive models, and generate visualizations. The results will be saved in the results directory.
+This script will build predictive models and generate visualizations. The results will be saved in the results directory.
 
 ## Analysis and Modeling
 
 The project includes:
 
-- Exploratory Data Analysis (EDA): Visualizations and statistical summaries to understand the distribution of features and their relationships with the price.
 - Predictive Modeling: Building regression models to predict diamond prices based on their attributes. Models may include linear regression, decision trees, or more advanced algorithms.
 - Evaluation: Assessing model performance using appropriate metrics and validation techniques.
 
